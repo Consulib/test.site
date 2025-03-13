@@ -5,114 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr François Bruchou</title>
     <style>
+        /* Styles généraux */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        
-        /* Header */
+
+        /* HEADER */
         .header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 10px 50px;
-            background-color: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            justify-content: space-between;
+            padding: 10px 40px;
         }
+
+        /* Logo */
         .logo img {
             height: 60px;
         }
-        .nav-links {
+
+        /* Menu */
+        .menu {
             display: flex;
             gap: 20px;
         }
-        .nav-links a {
+
+        .menu a {
             text-decoration: none;
             color: black;
-            font-size: 16px;
             font-weight: bold;
         }
+
+        /* Contact rapide */
         .contact-box {
-            background-color: #5E8D74;
-            padding: 10px 20px;
-            border-radius: 5px;
+            background-color: #7A9B84; /* Couleur du site */
             color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
+
         .contact-box img {
             width: 20px;
+            margin-right: 10px;
         }
-        
-        /* Hero Section */
+
+        /* SECTION HERO */
         .hero {
             position: relative;
-            height: 100vh;
-            background: url('pexels-minan1398-1543756-scaled.webp') no-repeat center center/cover;
+            height: 80vh;
+            background: url('https://www.bureaudesmoniteurs.com/wp-content/uploads/2021/12/pexels-min-an-1543756une.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            color: white;
         }
-        .hero-content {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            text-align: center;
             width: 50%;
         }
-        .hero-content h1 {
-            font-size: 36px;
-            color: #2C2C44;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #2D2A3C;
         }
-        .hero-content p {
-            font-size: 18px;
-            color: #2C2C44;
+
+        p {
+            font-size: 1.2rem;
+            color: #444;
         }
-        .hero-content .contact-button {
-            background-color: #2C2C44;
+
+        .btn {
+            display: inline-block;
+            background: #2D2A3C;
             color: white;
             padding: 10px 20px;
-            border: none;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
+
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header class="header">
         <div class="logo">
-            <img src="logo FB.png" alt="Dr François Bruchou">
+            <img src="https://dr-francois-bruchou.com/wp-content/uploads/2024/09/Plan-de-travail-10.png" alt="Dr François Bruchou">
         </div>
-        <nav class="nav-links">
-            <a href="#accueil">Accueil</a>
+        <nav class="menu">
+            <a href="#">Accueil</a>
             <a href="#expertise">Expertise</a>
             <a href="#services">Services</a>
             <a href="#teleconsultation">Téléconsultation</a>
             <a href="#contact">Contact</a>
         </nav>
         <div class="contact-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="Message">
-            <div>
-                <p>Vous avez une question ?</p>
-                <p>France : +336 29 98 15 69</p>
-            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1034/1034141.png" alt="message">
+            <span>France : +336 29 98 15 69</span>
         </div>
     </header>
 
-    <section class="hero" id="accueil">
-        <div class="hero-content">
+    <!-- SECTION HERO -->
+    <section class="hero">
+        <div class="overlay">
             <h1>Dr François Bruchou, chirurgien orthopédique et traumatologue</h1>
             <p>Spécialiste en chirurgie orthopédique et traumatologie, nous mettons notre expertise au service de votre santé.</p>
-            <button class="contact-button" onclick="location.href='#contact'">Contact</button>
+            <a href="#contact" class="btn">Contact</a>
         </div>
     </section>
+
 </body>
 </html>
