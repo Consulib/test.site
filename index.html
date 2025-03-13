@@ -3,130 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet Médical</title>
+    <title>Dr François Bruchou</title>
     <style>
-        * {
+        body {
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        body {
-            background-color: #f4f4f4;
-        }
+        
+        /* Header */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 50px;
-            background: white;
+            padding: 10px 50px;
+            background-color: white;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
             z-index: 1000;
         }
         .logo img {
-            height: 50px;
+            height: 60px;
         }
         .nav-links {
-            list-style: none;
             display: flex;
-        }
-        .nav-links li {
-            margin: 0 15px;
+            gap: 20px;
         }
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: black;
+            font-size: 16px;
             font-weight: bold;
-            transition: 0.3s;
-        }
-        .nav-links a:hover {
-            color: #007b5e;
         }
         .contact-box {
-            background: #84a98c;
+            background-color: #5E8D74;
             padding: 10px 20px;
-            display: flex;
-            align-items: center;
             border-radius: 5px;
             color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .contact-box img {
-            width: 25px;
-            margin-right: 10px;
+            width: 20px;
         }
-        .hero-section {
+        
+        /* Hero Section */
+        .hero {
             position: relative;
-            height: 600px;
-            background: url('IMAGE-DE-FOND.jpg') no-repeat center center/cover;
+            height: 100vh;
+            background: url('pexels-minan1398-1543756-scaled.webp') no-repeat center center/cover;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            padding: 50px;
-            margin-top: 80px; /* Pour éviter que le header ne masque le haut */
-        }
-        .overlay-box {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 30px;
-            max-width: 400px;
-            text-align: left;
-        }
-        .overlay-box h1 {
-            font-size: 26px;
-            color: #333;
-        }
-        .overlay-box p {
-            font-size: 16px;
-            margin: 10px 0;
-            color: #555;
-        }
-        .contact-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #1d3557;
+            justify-content: center;
+            text-align: center;
             color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
         }
-        .contact-btn:hover {
-            background: #457b9d;
+        .hero-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+        }
+        .hero-content h1 {
+            font-size: 36px;
+            color: #2C2C44;
+        }
+        .hero-content p {
+            font-size: 18px;
+            color: #2C2C44;
+        }
+        .hero-content .contact-button {
+            background-color: #2C2C44;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="logo">
-            <img src="logo.png" alt="Logo du Cabinet">
+            <img src="logo FB.png" alt="Dr François Bruchou">
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#teleconsultation">Téléconsultation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav class="nav-links">
+            <a href="#accueil">Accueil</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#services">Services</a>
+            <a href="#teleconsultation">Téléconsultation</a>
+            <a href="#contact">Contact</a>
         </nav>
         <div class="contact-box">
-            <img src="message-icon.png" alt="Icône Message">
+            <img src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="Message">
             <div>
                 <p>Vous avez une question ?</p>
-                <p>France : +33 6 29 98 15 69</p>
+                <p>France : +336 29 98 15 69</p>
             </div>
         </div>
     </header>
-    
-    <section class="hero-section">
-        <div class="overlay-box">
-            <h1>Dr François BRUCHOU, chirurgien orthopédiste et traumatologue</h1>
-            <p>Spécialiste en chirurgie orthopédique et traumatologique, nous vous accompagnons pour une prise en charge optimale.</p>
-            <a href="#contact" class="contact-btn">→ Contact</a>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Dr François Bruchou, chirurgien orthopédique et traumatologue</h1>
+            <p>Spécialiste en chirurgie orthopédique et traumatologie, nous mettons notre expertise au service de votre santé.</p>
+            <button class="contact-button" onclick="location.href='#contact'">Contact</button>
         </div>
     </section>
 </body>
